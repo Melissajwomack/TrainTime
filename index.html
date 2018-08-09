@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Train Scheduler</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <!-- MomentJS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container font-weight-light">
+        <!-- Header Row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-dark">
+                    <div class="card-body text-white text-center p-4">
+                        <h1 class="font-weight-light">Train  <i class="fas fa-train"></i>  Time</h1>
+                        <h5>Chooo <i class="fab fa-cloudversify"></i> Chooo <i class="fab fa-cloudversify"></i></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Results Row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mt-4">
+                    <div class="card-header bg-dark text-white">Current Train Schedule  <i class="fas fa-stopwatch"></i></div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Search Parameters Row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mt-4 mb-5">
+                    <div class="card-header bg-dark text-white">Add a Train  <i class="fas fa-calendar-plus"></i></div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <form>
+                                <div class="form-group">
+                                    <label for="name-input">Train Name </label>
+                                    <input type="text" class="form-control" id="name-input" placeholder="Thomas the Tank Engine">
+                                </div>
+                                <div class="form-group">
+                                    <label for="destination-input">Destination </label>
+                                    <input type="text" class="form-control" id="destination-input" placeholder="Disney Land">
+                                </div>
+                                <div class="form-group">
+                                    <label for="first-time-input">First Train Time (HH:mm - military time) </label>
+                                    <input type="text" class="form-control" id="first-time-input" placeholder="16:04">
+                                </div>
+                                <div class="form-group">
+                                    <label for="frequency-input">Frequency (min) </label>
+                                    <input type="text" class="form-control" id="frequency-input" placeholder="5">
+                                </div>
+                                <div>
+                                    <input type="Submit" class="btn btn-dark" id="sButton"></input>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="javascript/index.js"></script>
+</body>
+
+</html>
